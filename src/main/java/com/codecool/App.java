@@ -2,14 +2,14 @@ package com.codecool;
 
 
 import com.codecool.dao.ConnectorDB;
+import com.codecool.dao.MessageDAO;
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
-public class App
-{
-    public static void main( String[] args ) throws IOException, ClassNotFoundException {
+public class App {
+    public static void main( String[] args ) throws Exception {
 
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
@@ -19,6 +19,7 @@ public class App
 
         System.out.println("Server sucessfully started on port 8000");
 
-        ConnectorDB connectorDB = new ConnectorDB();
+        MessageDAO messageDAO = new MessageDAO();
+        messageDAO.getMessages();
     }
 }
