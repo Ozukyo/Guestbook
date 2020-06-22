@@ -14,6 +14,7 @@ public class App {
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
         server.createContext("/messages", new MessageHandler());
+        server.createContext("/welcomepage", new WelcomePageHandler());
         server.setExecutor(null);
         server.start();
 
