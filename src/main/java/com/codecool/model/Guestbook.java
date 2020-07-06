@@ -1,4 +1,4 @@
 package com.codecool.model;
 
-public class WelcomePage {
+public class Guestbook {
 }

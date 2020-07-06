@@ -1,4 +1,4 @@
-package com.codecool;
+package com.codecool.handlers;
 
 import com.codecool.dao.MessageDAO;
 import com.codecool.model.Message;

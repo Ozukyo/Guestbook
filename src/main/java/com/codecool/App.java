@@ -1,11 +1,11 @@
 package com.codecool;
 
 
-import com.codecool.dao.ConnectorDB;
 import com.codecool.dao.MessageDAO;
+import com.codecool.handlers.MessageHandler;
+import com.codecool.handlers.GuestbookHandler;
 import com.sun.net.httpserver.HttpServer;
 
-import java.io.IOException;
 import java.net.InetSocketAddress;
 
 public class App {
@@ -14,7 +14,7 @@ public class App {
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
         server.createContext("/messages", new MessageHandler());
-        server.createContext("/welcomepage", new WelcomePageHandler());
+        server.createContext("/guestbook_form", new GuestbookHandler());
         server.setExecutor(null);
         server.start();
 

@@ -1,13 +1,17 @@
 package com.codecool.model;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Message {
     private int id;
     private String title;
     private String content;
     private String authorName;
-    private Timestamp creationDate;
+    private String creationDate;
+    private Timestamp date;
+    
 
     public int getId() {
         return id;
@@ -45,12 +49,31 @@ public class Message {
         return this;
     }
 
-    public Timestamp getCreationDate() {
+    public String getCreationDate() {
         return creationDate;
     }
 
-    public Message setCreationDate(Timestamp creationDate) {
-        this.creationDate = creationDate;
+    public Message setCreationDate() {
+        this.creationDate = "2077.05.02 09:23";
         return this;
+    }
+
+    public void convertStringToTimestamp() {
+        try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSSSSS");
+            Date parsedDate = dateFormat.parse(this.creationDate + ".000000");
+            this.setDate(new Timestamp(parsedDate.getTime()));
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Timestamp getConvertedDate() {
+        return date;
+    }
+
+    public void setDate(Timestamp date) {
+        this.date = date;
     }
 }
