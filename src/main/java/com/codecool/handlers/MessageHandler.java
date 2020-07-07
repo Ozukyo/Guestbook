@@ -29,10 +29,10 @@ public class MessageHandler implements HttpHandler {
 
             exchange.getResponseHeaders().put("Content type", Collections.singletonList("application/json"));
             exchange.getResponseHeaders().put("Access-Control-Allow-Origin", Collections.singletonList("*"));
-            exchange.sendResponseHeaders(200, response.length());
+            exchange.sendResponseHeaders(200, response.getBytes().length);
 
         } catch (Exception e) {
-            exchange.sendResponseHeaders(404, response.length());
+            exchange.sendResponseHeaders(404, response.getBytes().length);
         }
         OutputStream os = exchange.getResponseBody();
         os.write(response.getBytes());

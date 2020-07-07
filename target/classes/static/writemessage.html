@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Write message</title>
+    <script src="/static/js/script2.js" defer></script>
+    <link rel="stylesheet" href="/static/css/writemessage_style.css">
+    <div class="background"></div>
+</head>
+
+<body>
+
+<div class="container">
+    <header> <img src="/static/img/logo2.png"> </header>
+    <form id="message-form">
+        <a href="/static/welcomepage.html">
+            <img src="/static/img/golden-button.png">
+        </a>
+        <label for="fname"><strong>Name</strong></label>
+        <input type="text" id="fname" name="firstname" placeholder="Enter your name">
+
+        <label for="title"><strong>Title</strong></label>
+        <input type="text" id="title" title="title" placeholder="Enter title">
+
+        <label for="content"><strong>Your message</strong></label>
+        <textarea id="content" name="content" placeholder="Write something..." style="height:200px"></textarea>
+
+        <input type="submit" id="button" value="Send">
+    </form>
+</div>
+</body>
+</html>

@@ -4,6 +4,7 @@ package com.codecool;
 import com.codecool.dao.MessageDAO;
 import com.codecool.handlers.MessageHandler;
 import com.codecool.handlers.GuestbookHandler;
+import com.codecool.handlers.Static;
 import com.sun.net.httpserver.HttpServer;
 
 import java.net.InetSocketAddress;
@@ -15,6 +16,7 @@ public class App {
 
         server.createContext("/messages", new MessageHandler());
         server.createContext("/guestbook_form", new GuestbookHandler());
+        server.createContext("/static", new Static());
         server.setExecutor(null);
         server.start();
 
