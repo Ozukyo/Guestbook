@@ -1,0 +1,100 @@
+html {
+    height: 100%;
+}
+body {
+    background-image: linear-gradient(#00261c, #001510);
+    /*background-color: #00261c;*/
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 5%;
+    height: 550px;
+    width: 700px;
+    /*background-image: linear-gradient(160deg, rgba(182, 155, 100, 0.5), rgba(180, 126, 17, 0.47), rgba(254, 241, 162, 0.46), rgba(217, 177, 85, 0.47), rgba(182, 155, 100, 0.5));*/
+    background-color: rgb(0, 26, 21);
+    border: 1px solid #b47e11;
+    /*border: none;*/
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.44);
+}
+
+
+a > img {
+    height: 60px;
+    width: 60px;
+    top: 10px;
+}
+
+form > #fname, #title {
+    background-color: rgba(0, 0, 0, 0.27);
+    /*background-color: rgb(0, 26, 21);*/
+    border: 1px solid #b47e11;
+    color: rgb(175, 159, 77);
+    /*padding: 7px;*/
+    text-align: center;
+}
+
+form>textarea {
+    width: 300px;
+    border-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.27);
+    /*background-color: rgb(0, 26, 21);*/
+    border: 1px solid #b47e11;
+    color:  rgb(175, 159, 77);
+    padding: 7px;
+    text-align: center;
+    resize: none;
+}
+
+form >label {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgb(175, 159, 77);
+    /*color: rgb(0, 26, 21);*/
+    padding: 7px;
+    margin-top: 10px;
+
+}
+
+input[type=text] {
+    border-radius: 8px;
+}
+
+#button {
+    margin-top: 20px;
+    height: 45px;
+    width: 90px;
+    border-radius: 8px;
+    opacity: 0.6;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
+    inset 0 -2px 5px 1px rgba(139,66,8,1),
+    inset 0 -1px 1px 3px rgba(250,227,133,1);
+    background-image: linear-gradient(160deg, #846442, #b47e11, #fef1a2, rgba(226, 182, 79, 0.88), #a54e07);
+    border: 1px solid #a55d07;
+    color: #000000;
+    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position:center;
+}
+
+#button:hover {
+    opacity: 1;
+}
+
