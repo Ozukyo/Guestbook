@@ -23,7 +23,7 @@ public class GuestbookHandler implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
 
         String response = "";
-        String method = exchange.getRequestMethod(); // albo "POST" albo "GET"
+        String method = exchange.getRequestMethod();
 
         if(method.equals("POST")) {
             InputStreamReader isr = new InputStreamReader(exchange.getRequestBody(), StandardCharsets.UTF_8);
@@ -34,8 +34,7 @@ public class GuestbookHandler implements HttpHandler {
             Message message = new Message();
             message.setTitle(data.get("title"))
                     .setAuthorName(data.get("author"))
-//                    TODO: insert argument into setcreationdate later
-                    .setCreationDate()
+                    .setCurrentCreationDate()
                     .setContent(data.get("content"));
 
             System.out.println(message.toString());

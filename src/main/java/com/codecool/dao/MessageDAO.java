@@ -36,7 +36,7 @@ public class MessageDAO {
                         .setTitle(title)
                         .setContent(content)
                         .setAuthorName(authorName)
-                        .setCreationDate(); // TODO: insert argument into setter later
+                        .setCreationDateFromDB(creationDate);
 
                 messages.add(message);
             }
@@ -55,10 +55,7 @@ public class MessageDAO {
     public void setMessage(Message message) throws ClassNotFoundException {
         ConnectorDB connectorDB = new ConnectorDB();
         Connection connection = connectorDB.getConnection();
-//        System.out.println(message.getCreationDate());
-//        message.convertStringToTimestamp();
-//        System.out.println(message.getConvertedDate());
-        message.setCreationDate();
+
 
         try {
 
